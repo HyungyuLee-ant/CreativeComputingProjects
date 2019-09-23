@@ -81,6 +81,6 @@ function setup() {
 fill(255)
 rect(0,0,windowWidth,100);  
 fill(0)
-text('Warning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing.\nCurrent Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\n(value less than 0 or exceeding 255 does not work\nSize:' + str(size),220,15);
+text('Warning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing.\nCurrent Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\n(value less than 0 or exceeding 255 does not work\nSize of the Circles: ' + str(size),220,15);
 
 }

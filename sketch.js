@@ -67,6 +67,6 @@ function setup() {
 fill(255)
 rect(0,0,windowWidth,84);  
 fill(0)
-text('Warning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing.\nCurrent Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\n(value less than 0 or exceeding 255 does not work)',220,15);
+text('Current Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\nWarning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing./nAlso,value less than 0 or exceeding 255 does not work',220,15);
 
 }

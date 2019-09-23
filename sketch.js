@@ -1,5 +1,6 @@
 let brightness = 0;
 let fRate =10;
+let size = 10;
 
 var button;
 function setup() {
@@ -7,20 +8,26 @@ function setup() {
   frameRate(fRate);
   background(brightness);
   button1 = createButton('brighter');
-  button1.position(19, 14);
+  button1.position(19, 9);
   button1.mousePressed(brighter);
   button2 = createButton('darker');
-  button2.position(94, 14);
+  button2.position(94, 9);
   button2.mousePressed(darker);
   button3 = createButton('save');
-  button3.position(160, 14);
+  button3.position(160, 9);
   button3.mousePressed(saveImg);
   button4 = createButton('faster');
-  button4.position(19, 46);
+  button4.position(19, 40);
   button4.mousePressed(faster);
   button5 = createButton('slower');
-  button5.position(79, 46);
+  button5.position(79, 40);
   button5.mousePressed(slower);
+  button6 = createButton('bigger');
+  button6.position(19, 70);
+  button6.mousePressed(bigger);
+  button7 = createButton('smaller');
+  button7.position(80, 70);
+  button7.mousePressed(smaller);
 }
 
 function brighter() {
@@ -47,6 +54,14 @@ function saveImg(){
   save('mycanvas.png');
 }
 
+function bigger(){
+  size += 10;
+}
+
+function smaller(){
+  size -= 10;
+}
+
 function draw() {
   r = random(255);
   g = random(255);
@@ -55,7 +70,6 @@ function draw() {
 if (mouseIsPressed) {        
         noStroke();
         fill(r,g,b);
-        var size = random(15, 20);
         ellipse(mouseX, mouseY, size, size);
     }
 
@@ -65,8 +79,8 @@ function setup() {
 }
 
 fill(255)
-rect(0,0,windowWidth,84);  
+rect(0,0,windowWidth,100);  
 fill(0)
-text('Current Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\nWarning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing./nAlso,value less than 0 or exceeding 255 does not work',220,15);
+text('Warning: Changing background color will reset the drawing!\nSo save beforehand to protect your drawing.\nCurrent Framerate: ' + str(fRate)+ '\nCurrent Background Value: ' + str(brightness) + '\n(value less than 0 or exceeding 255 does not work\nSize:' + str(size),220,15);
 
 }

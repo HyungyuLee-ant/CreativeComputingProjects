@@ -20,7 +20,7 @@ function draw() {
     for (x=0; x<windowWidth; x+=delta) {
       z = random(0, 1);
       if (z < backSlashProb) {
-        stroke(random(255),0,0, 127);
+        stroke(random(255),127,127, 127);
         strokeWeight(25);
         line(x, y, x+delta, y+delta);
       } else {
@@ -48,7 +48,7 @@ function draw() {
 ///small grids 
   for (let y = 80; y <= height - 80; y += 20) {
     for (let x = 80; x <= width - 80; x += 20) {
-      stroke(0,0,255,127);
+      stroke(random(255),radom(255), random(255),127);
       strokeWeight(3)
       line(x - 6, y - 6, x + 6, y + 6);
       if (x < mouseX && y < mouseY) {

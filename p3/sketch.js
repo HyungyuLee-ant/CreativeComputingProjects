@@ -20,7 +20,7 @@ function draw() {
     for (x=0; x<windowWidth; x+=delta) {
       z = random(0, 1);
       if (z < backSlashProb) {
-        stroke(random(255),127,127, 127);
+        stroke(random(255), random(255), random(255), 127);
         strokeWeight(25);
         line(x, y, x+delta, y+delta);
       } else {

@@ -11,7 +11,7 @@ function setup() {
   colorMode(HSB);
   var url = 'http://openapi.seoul.go.kr:8088/62724845716d616d3731494d586c45/json/octastatapi378/1/26';
   // loadJSON(url, onElecQ);
-  loadJSON(electricUsage.json, onElecQ);
+  loadJSON('electricUsage.json', onElecQ);
   textSize(10);
   textFont(font);
   textAlign(LEFT, TOP);
